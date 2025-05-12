@@ -24,7 +24,7 @@ func (app *application) mount() *chi.Mux {
 		r.Put("/", app.updateTask)
 		r.Delete("/", app.deleteTask)
 		r.Get("/", app.getAllTask)
-		r.Get("/123", app.getTask)
+		r.Get("/{taskID}", app.getTask)
 	})
 
 
